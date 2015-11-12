@@ -7,7 +7,7 @@ import Adafruit_BBIO.GPIO as GPIO
 def moveLeft(velocity):
 	print("move left")
 	power=0.0
-	power=velocity*7.9
+	power=velocity*4
 	power=round(power,0)
 	power=int(power)
 	#if power > 0, moving forward
@@ -32,7 +32,7 @@ def moveRight(velocity):
 	right1="P9_13"
 	right2="P9_15"
 	power=0.0
-	power=velocity*7.9
+	power=velocity*4
 	power=round(power,0)
 	power=int(power)
 	#if power > 0, moving forward
