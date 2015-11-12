@@ -12,15 +12,15 @@ def moveLeft(power)
 	power=round(power,0)
 	#if power > 0, moving forward
 	if power>0:
-                GPIO.output(left1, GPIO.LOW);
-                GPIO.output(left2, GPIO.HIGH);
-                PWM.set_duty_cycle(leftpwm,power)
+                GPIO.output("P9_11", GPIO.LOW);
+                GPIO.output("P9_12", GPIO.HIGH);
+                PWM.set_duty_cycle("P9_14",power)
 	#if power < 0, move backward
 	if power<0:
 		power=abs(power)
-		GPIO.output(left1, GPIO.HIGH);
-                GPIO.output(left2, GPIO.LOW);
-                PWM.set_duty_cycle(leftpwm,power)
+		GPIO.output("P9_11", GPIO.HIGH);
+                GPIO.output("P9_12", GPIO.LOW);
+                PWM.set_duty_cycle("P9_14",power)
 	#if power = 0, stop
 	if power == 0
 		GPIO.output(left1, GPIO.LOW);
