@@ -7,12 +7,12 @@ left2="P9_12"
 rightpwm="p9_16"
 right1="P9_13"
 right2="P9_15"
-PWM.start(leftpwm, 0,1000);
-PWM.start(rightpwm, 0,1000);
-GPIO.setup(left1, GPIO.OUT); 
-GPIO.setup(left2, GPIO.OUT); 
-GPIO.setup(right1, GPIO.OUT); 
-GPIO.setup(right2, GPIO.OUT); 
+PWM.start("p9_14", 0,1000);
+PWM.start("p9_16", 0,1000);
+GPIO.setup("p9_11", GPIO.OUT); 
+GPIO.setup("p9_12", GPIO.OUT); 
+GPIO.setup("p9_13", GPIO.OUT); 
+GPIO.setup("p9_15", GPIO.OUT); 
 
 
 def moveLeft(velocity):
