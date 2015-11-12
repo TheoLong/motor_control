@@ -23,9 +23,9 @@ def moveLeft(power)
                 PWM.set_duty_cycle("P9_14",power)
 	#if power = 0, stop
 	if power == 0
-		GPIO.output(left1, GPIO.LOW);
-                GPIO.output(left2, GPIO.LOW);
-                PWM.set_duty_cycle(leftpwm,0)
+		GPIO.output"(P9_11", GPIO.LOW);
+                GPIO.output("P9_12", GPIO.LOW);
+                PWM.set_duty_cycle("P9_14",0)
 def moveLeft(power)
 	power=0.0
 	power=velocity*7.9
