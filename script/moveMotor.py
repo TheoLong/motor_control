@@ -1,3 +1,5 @@
+import Adafruit_BBIO.PWM as PWM
+import Adafruit_BBIO.GPIO as GPIO
 leftpwm="P9_14"
 left1="P9_11"
 left2="P9_12"
