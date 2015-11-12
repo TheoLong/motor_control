@@ -31,9 +31,9 @@ if __name__ == '__main__':
     #Initialize node
     rospy.init_node('motor_control')
     #Create publisher, to send out a String with the first joint name of every received message as an example.
-    pub = rospy.Publisher('/py_controller/rear_right_wheel/cmd', JointState, rightMotor)
+    rospy.Subscriber('/py_controller/rear_right_wheel/cmd', JointState, rightMotor)
     #Create subscriber, and tell it to call js_call() whenever a message is received
-    sub = rospy.Subscriber('/py_controller/rear_left_wheel/cmd', JointState, leftMotor)
+    rospy.Subscriber('/py_controller/rear_left_wheel/cmd', JointState, leftMotor)
 
     #We need to wait for new messages
     rospy.spin()
