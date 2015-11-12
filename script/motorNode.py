@@ -4,6 +4,17 @@
 import Adafruit_BBIO.PWM as PWM
 import Adafruit_BBIO.GPIO as GPIO
 import moveMotor
+PWM.start("P9_14", 0,1000)
+GPIO.setup("P9_12", GPIO.OUT); 
+GPIO.output("P9_12", GPIO.LOW);
+GPIO.setup("P9_11", GPIO.OUT);
+GPIO.output("P9_11", GPIO.LOW);
+
+PWM.start("P9_16", 0,1000)
+GPIO.setup("P9_13", GPIO.OUT);
+GPIO.output("P9_13", GPIO.LOW);
+GPIO.setup("P9_15", GPIO.OUT);
+GPIO.output("P9_15", GPIO.LOW);
 
 
 
