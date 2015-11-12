@@ -1,18 +1,7 @@
 import Adafruit_BBIO.PWM as PWM
 import Adafruit_BBIO.GPIO as GPIO
 
-leftpwm="P9_14"
-left1="P9_11"
-left2="P9_12"
-rightpwm="p9_16"
-right1="P9_13"
-right2="P9_15"
-PWM.start("p9_14", 0,1000);
-PWM.start("p9_16", 0,1000);
-GPIO.setup("p9_11", GPIO.OUT); 
-GPIO.setup("p9_12", GPIO.OUT); 
-GPIO.setup("p9_13", GPIO.OUT); 
-GPIO.setup("p9_15", GPIO.OUT); 
+
 
 
 def moveLeft(velocity):
