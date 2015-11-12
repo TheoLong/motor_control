@@ -9,6 +9,7 @@ def moveLeft(velocity):
 	power=0.0
 	power=velocity*7.9
 	power=round(power,0)
+	power=int(power)
 	#if power > 0, moving forward
 	if power>0:
                 GPIO.output("P9_11", GPIO.LOW);
@@ -33,6 +34,7 @@ def moveRight(velocity):
 	power=0.0
 	power=velocity*7.9
 	power=round(power,0)
+	power=int(power)
 	#if power > 0, moving forward
 	if power>0:
                 GPIO.output(right1, GPIO.LOW);
