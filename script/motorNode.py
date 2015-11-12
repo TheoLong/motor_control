@@ -3,7 +3,7 @@
 # Author: Your Name <theoloong@vt.edu>
 import Adafruit_BBIO.PWM as PWM
 import Adafruit_BBIO.GPIO as GPIO
-
+import moveMotor
 
 
 
@@ -17,9 +17,9 @@ from std_msgs.msg import String
 
 # Create variable so we can always see/use it, but set it to a value that indicates it's not yet valid
 def rightMotor(msg):
-	moveRight(msg.velocity[0])
+	moveMotor.moveRight(msg.velocity[0])
 def leftMotor(msg):
-	moveLeft(msg.velocity[0])
+	moveMotor.moveLeft(msg.velocity[0])
 
 #Function which is called every time a JointState is received, if the Subscriber is set up to use this function
 def js_call(data):
