@@ -37,20 +37,20 @@ def moveRight(velocity):
 	power=int(power)
 	#if power > 0, moving forward
 	if power>0:
-                GPIO.output(right1, GPIO.LOW);
-                GPIO.output(right2, GPIO.HIGH);
-                PWM.set_duty_cycle(rightpwm,power)
+                GPIO.output("P9_13", GPIO.LOW);
+                GPIO.output("P9_15", GPIO.HIGH);
+                PWM.set_duty_cycle("p9_16",power)
 	#if power < 0, move backward
 	if power<0:
 		power=abs(power)
-		GPIO.output(right1, GPIO.HIGH);
-                GPIO.output(right2, GPIO.LOW);
-                PWM.set_duty_cycle(rightpwm,power)
+		GPIO.output("P9_15", GPIO.HIGH);
+                GPIO.output("P9_15", GPIO.LOW);
+                PWM.set_duty_cycle("p9_16",power)
 	#if power = 0, stop
 	if power == 0:
 		power=round(power)
-		GPIO.output(right1, GPIO.LOW);
-                GPIO.output(right2, GPIO.LOW);
-                PWM.set_duty_cycle(rightpwm,0)
+		GPIO.output("P9_13", GPIO.LOW);
+                GPIO.output("P9_15", GPIO.LOW);
+                PWM.set_duty_cycle("p9_16",0)
 		
 
