@@ -7,7 +7,7 @@ right2="P9_15"
 
 
 def moveLeft(velocity):
-	print("move left %.3f" % power)
+	print("move left")
 	power=0.0
 	power=velocity*7.9
 	power=round(power,0)
@@ -28,7 +28,7 @@ def moveLeft(velocity):
                 GPIO.output("P9_12", GPIO.LOW);
                 PWM.set_duty_cycle("P9_14",0)
 def moveRight(velocity):
-	print("move left %.3f" % power)
+	print("move left")
 	rightpwm="p9_16"
 	right1="P9_13"
 	right2="P9_15"
