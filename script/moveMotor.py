@@ -24,7 +24,7 @@ def moveLeft(power):
                 PWM.set_duty_cycle("P9_14",power)
 	#if power = 0, stop
 	if power == 0:
-		GPIO.output"(P9_11", GPIO.LOW);
+		GPIO.output("P9_11", GPIO.LOW);
                 GPIO.output("P9_12", GPIO.LOW);
                 PWM.set_duty_cycle("P9_14",0)
 def moveRight(power):
