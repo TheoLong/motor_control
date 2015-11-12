@@ -4,8 +4,8 @@ import Adafruit_BBIO.GPIO as GPIO
 
 
 
-def moveLeft(velocity):
-	print("move left")
+def moveRight(velocity):
+	print("move right")
 	power=0.0
 	power=velocity*4
 	if power>100.0:
@@ -28,8 +28,8 @@ def moveLeft(velocity):
 		GPIO.output("P9_11", GPIO.LOW);
                 GPIO.output("P9_12", GPIO.LOW);
                 PWM.set_duty_cycle("P9_14",0)
-def moveRight(velocity):
-	print("move RIGHT")
+def moveLeft(velocity):
+	print("move left")
 	power=0.0
 	power=velocity*4
 	if power>100.0:
